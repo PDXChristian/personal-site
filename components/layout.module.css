@@ -1,0 +1,11 @@
+.container {
+	@apply sm:max-w-sm md:max-w-lg xl:max-w-7xl pt-0 pb-0 pr-4 pl-4 mt-12 mr-auto ml-auto mb-24;
+}
+
+.header {
+	@apply pt-20 flex flex-col items-center;
+}
+
+.backToHome {
+	@apply mt-12 mr-0 ml-0 mb-0
+}
