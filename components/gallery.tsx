@@ -1,4 +1,4 @@
-interface Photo {src: string, width: number, height: number}
+interface Photo {src: string}
 
 interface GalleryProps {
 	photos: Array<Photo>
