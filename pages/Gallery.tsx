@@ -7,7 +7,6 @@ import { GetStaticProps } from "next"
 
 export const getStaticProps: GetStaticProps = async () => {
 	const allPhotos = photos()
-	console.log(allPhotos)
 	return {
 		props: {
 			allPhotos
