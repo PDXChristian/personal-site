@@ -829,6 +829,11 @@ module.exports = {
     'disabled',
   ],
   variants: {
+	extend: {
+		transform: ['hover'],
+		zIndex: ['hover'],
+		transitionProperty: ['hover'],
+	},
     accessibility: ['responsive', 'focus-within', 'focus'],
     alignContent: ['responsive'],
     alignItems: ['responsive'],
