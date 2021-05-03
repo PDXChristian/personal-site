@@ -33,7 +33,7 @@ const Navbar =
 					document.getElementById("textVal").innerText = ""
 				} else if (command[1] === "~" || command[1] === "Home") {
 					router.push("/")
-				} else if (command[1] === "About" || command[1] === "Gallery" || command[1] == "Projects") {
+				} else if (command[1] === "About" || command[1] === "Gallery" || command[1] == "Projects" || command[1] == "test") {
 					router.push(command[1])
 				} else {
 					router.push("404")
