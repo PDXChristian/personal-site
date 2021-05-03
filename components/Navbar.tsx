@@ -1,6 +1,6 @@
 import Link from "next/link"
 import styles from "../styles/utils.module.css"
-import React, {KeyboardEvent, useState} from "react"
+import React, {KeyboardEvent, SyntheticEvent, useState} from "react"
 import {useRouter} from "next/router"
 
 const Navbar =
@@ -27,10 +27,10 @@ const Navbar =
 	const handleKey = (event: KeyboardEvent<HTMLInputElement>) => {
 		if (event.key === "Enter") {
 			event.preventDefault()
-			const command = document.getElementById("textVal").innerText.split(" ")
+			const command = event.currentTarget.innerText.split(" ")
 			if (command[0] === "cd") {
 				if (pageTitle === command[1] || command[1] === undefined) {
-					document.getElementById("textVal").innerText = ""
+					event.currentTarget.innerText = ""
 				} else if (command[1] === "~" || command[1] === "Home") {
 					router.push("/")
 				} else if (command[1] === "About" || command[1] === "Gallery" || command[1] == "Projects" || command[1] == "test") {
@@ -39,13 +39,13 @@ const Navbar =
 					router.push("404")
 				}
 			} else {
-				document.getElementById("textVal").innerText = `command not found: ${command[0]}`
+				event.currentTarget.innerText = `command not found: ${command[0]}`
 				setDelete(true)
 			}
 		}
 		if (shouldDelete) {
 			setDelete(false)
-			document.getElementById("textVal").innerText = ""
+			event.currentTarget.innerText = ""
 		}
 	}
 
@@ -53,8 +53,8 @@ const Navbar =
 		document.getElementById("textVal").focus()
 	}
 
-	const handleFocus = () => {
-		document.getElementById("textVal").innerText = ""
+	const handleFocus = (event: React.FocusEvent<HTMLElement>) => {
+		event.currentTarget.innerText = ""
 	}
 
 	return (

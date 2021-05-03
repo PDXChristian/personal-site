@@ -39,7 +39,15 @@ const ImageGallery = ({
 					<title>Gallery</title>
 				</Head>
 				<Gallery photos={allPhotos} onSrcClicked={handleClick} />				
-				{ showImage ? <div onClick={() => setShow(!setShow)} className="fixed w-screen h-screen top-0 left-0 z-50 grid place-content-center bg-black bg-opacity-80"><img className="justify-self-center rounded w-2/3" src={image} /></div>
+				{ showImage ? 
+					<div onClick={(event) => {
+						if(event.target === event.currentTarget) {
+							setShow(!setShow)
+						}
+						console.log(event.currentTarget)
+					}} className="fixed w-screen h-screen top-0 left-0 z-50 grid place-content-center bg-black bg-opacity-90">
+						<img className="justify-self-center rounded w-2/3" src={image} />
+					</div>
 					: ""
 				}
 			</Layout>
