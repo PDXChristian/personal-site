@@ -1,4 +1,4 @@
-export interface Photo {src: string}
+export interface Photo {thumbnail: string}
 
 export interface GalleryProps {
   photos: Array<Photo>

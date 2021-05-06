@@ -19,6 +19,7 @@ const ImageGallery = ({
 	allPhotos
 }: {
 	allPhotos: {
+		thumbnail: string
 		src: string
 	} []
 }) : React.ReactElement => {
@@ -30,6 +31,7 @@ const ImageGallery = ({
 		setImage(newValue.src)
 		console.log("Click state: " + showImage)
 		console.log("Image: " + image)
+		console.log(newValue)
 	}
 
 	return (

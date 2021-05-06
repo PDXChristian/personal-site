@@ -12,12 +12,14 @@ const photos = (): Array<Photo> => {
 	const getAllPhotos = fileNames.map((photo) => {
 		const src = `photos/${photo}`
 		const id = photo.replace(
-			/\.jpeg$/,
+			/\.jpg$/,
 			"",
 		)
+		const thumbnail = `thumbs/${id}_thumb.jpg`
 
 		return {
 			id,
+			thumbnail,
 			src,
 		}
 	})
