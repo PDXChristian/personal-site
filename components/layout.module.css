@@ -1,5 +1,5 @@
 .container {
-	@apply relative sm:max-w-sm md:max-w-lg xl:max-w-7xl pt-0 pb-0 pr-4 pl-4 mt-12 mr-auto ml-auto mb-24;
+	@apply relative sm:max-w-sm md:max-w-lg lg:max-w-5xl text-center xl:max-w-6xl pt-0 pb-0 pr-4 pl-4 mt-12 mr-auto ml-auto mb-24;
 }
 
 .header {
