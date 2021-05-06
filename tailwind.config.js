@@ -42,6 +42,13 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
       'terminal': '#33FF00',
+	  'dark-pallet': {
+		  'base': '#161925',	
+		  'navbar': '#406E8E',
+		  'fg': '#8EA8C3',
+		  'dark': '#23395B',
+		  'highlight': '#CBF7ED',
+	  },
     },
     spacing: {
       px: '1px',
