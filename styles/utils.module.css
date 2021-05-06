@@ -27,5 +27,5 @@
 }
 
 .linkButton {
-	@apply lg:inline-flex lg:w-auto w-full px-5 py-2 rounded text-white dark:text-terminal font-bold font-mono items-center justify-center transition duration-500 ease-in-out hover:bg-blue-800 dark:hover:bg-green-700;
+	@apply lg:inline-flex lg:w-auto w-full px-5 py-2 rounded text-white dark:text-indigo-600 font-bold font-mono items-center justify-center transition duration-500 ease-in-out hover:bg-blue-800 dark:hover:bg-indigo-400;
 }

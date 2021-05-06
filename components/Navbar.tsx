@@ -59,8 +59,8 @@ const Navbar =
 
 	return (
 		<>
-			<nav className="flex items-center flex-wrap bg-blue-900 dark:bg-black p-3" onClick={focusSearch}>
-				<span className="text-xl text-white dark:text-terminal font-bold tracking-wide">
+			<nav className="flex items-center flex-wrap bg-blue-900 dark:bg-gray-800 p-3" onClick={focusSearch}>
+				<span className="text-xl text-white dark:text-indigo-600 font-bold tracking-wide">
 					<Link href="/">
 						<a className="inline-flex items-center p-2 dark:font-normal font-mono">
 							[self@christian {pageTitle}]$
@@ -68,7 +68,7 @@ const Navbar =
 					</Link>
 					<span id="textVal" spellCheck="false" className={`${styles.hideCursor} input outline-none cursor-not-allowed overflow-hidden max-w-xs inline-block align-text-top whitespace-nowrap`} role="textbox" onKeyDown={handleKey} onFocus={handleFocus} contentEditable></span><span className="animate-blink">_</span>
 				</span>
-				<button className=" inline-flex p-3 hover:bg-blue-800 rounded lg:hidden text-white ml-auto hover:text-white outline-none dark:font-normal dark:text-terminal dark:hover:bg-green-700" onClick={handleClick}>
+				<button className=" inline-flex p-3 hover:bg-blue-800 rounded lg:hidden text-white ml-auto hover:text-white outline-none dark:font-normal dark:text-indigo-600 dark:hover:bg-indigo-400" onClick={handleClick}>
 					<svg
 						className="w-6 h-6"
 						fill="none"
@@ -112,7 +112,7 @@ const Navbar =
 						</Link>
 						<a className={styles.linkButton} href="https://github.com/PDXChristian" target="_blank" rel="noreferrer">
 							<svg
-								className="fill-current text-white dark:text-terminal"
+								className="fill-current text-white dark:text-indigo-600"
 								viewBox="0 0 24 24"
 								xmlns="https://www.w3.org/2000/svg"
 								width="24px"
@@ -123,7 +123,7 @@ const Navbar =
 						</a>
 						<a className={styles.linkButton} href="https://twitch.tv/rightjoycon" target="_blank" rel="noreferrer">
 							<svg
-								className="fill-current text-white dark:text-terminal"
+								className="fill-current text-white dark:text-indigo-600"
 								viewBox="0 0 24 24"
 								xmlns="https://www.w3.org/2000/svg"
 								width="24px"
@@ -134,7 +134,7 @@ const Navbar =
 						</a>
 						<a className={styles.linkButton} href="https://twitter.com/ChristianTW4" target="_blank" rel="noreferrer">
 							<svg
-								className="fill-current text-white dark:text-terminal"
+								className="fill-current text-white dark:text-indigo-600"
 								viewBox="0 0 24 24"
 								xmlns="https://www.w3.org/2000/svg"
 								width="24px"
