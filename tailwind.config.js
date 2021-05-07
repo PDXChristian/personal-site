@@ -844,6 +844,7 @@ module.exports = {
 		zIndex: ['hover'],
 		transitionProperty: ['hover'],
 		textAlign: ['dark'],
+		outline: ['dark'],
 	},
     accessibility: ['responsive', 'focus-within', 'focus'],
     alignContent: ['responsive'],

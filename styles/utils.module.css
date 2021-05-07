@@ -35,9 +35,9 @@
 }
 
 .inputBoxes {
-	@apply border-2 h-8 dark:border-dark-pallet-dark m-4 dark:bg-dark-pallet-base;
+	@apply border-2 h-8 dark:border-dark-pallet-dark focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-dark-pallet-navbar m-4 dark:bg-dark-pallet-base;
 }
 
 .messageBox {
-	@apply border-2 resize-none sm:h-40 lg:h-64 w-5/6 dark:border-dark-pallet-dark m-4 dark:bg-dark-pallet-base;
+	@apply border-2 resize-none sm:h-40 lg:h-64 w-5/6 focus:ring-2 focus:ring-blue-300 focus:ring-dark-pallet-navbar dark:border-dark-pallet-dark m-4 focus:outline-none dark:bg-dark-pallet-base;
 }
