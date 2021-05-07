@@ -39,7 +39,7 @@ const Layout = ({
 					/>
 					<h1 className={utilStyles.heading2Xl}>{name}</h1>
 				</> :
-				pageTitle === "About" 						?
+				pageTitle === "Contact" 						?
 					<>
 						<Image
 							priority

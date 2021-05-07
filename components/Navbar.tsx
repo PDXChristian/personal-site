@@ -33,7 +33,7 @@ const Navbar =
 					event.currentTarget.innerText = ""
 				} else if (command[1] === "~" || command[1] === "Home") {
 					router.push("/")
-				} else if (command[1] === "About" || command[1] === "Gallery" || command[1] == "Projects" || command[1] == "test") {
+				} else if (command[1] === "Contact" || command[1] === "Gallery" || command[1] == "Projects" || command[1] == "test") {
 					router.push(command[1])
 				} else {
 					router.push("404")
@@ -95,11 +95,6 @@ const Navbar =
 								Home
 							</a>
 						</Link>
-						<Link href="/About">
-							<a className={styles.linkButton}>
-								About
-							</a>
-						</Link>
 						<Link href="/Projects">
 							<a className={styles.linkButton}>
 								Projects
@@ -108,6 +103,11 @@ const Navbar =
 						<Link href="/Gallery">
 							<a className={styles.linkButton}>
 								Gallery
+							</a>
+						</Link>
+						<Link href="/Contact">
+							<a className={styles.linkButton}>
+								Contact
 							</a>
 						</Link>
 						<a className={styles.linkButton} href="https://github.com/PDXChristian" target="_blank" rel="noreferrer">
