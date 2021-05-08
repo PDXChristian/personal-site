@@ -49,7 +49,6 @@ const About = (): React.ReactElement =>{
 		} else {
 			handleFailure()
 		}
-		success.current.hidden = false
 	}
 	return (
 		<Layout pageTitle="Contact">

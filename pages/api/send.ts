@@ -4,6 +4,9 @@ import { NextApiRequest, NextApiResponse } from "next"
 export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
 	sgMail.setApiKey(process.env.SENDGRID_API)
 	
+	const isEnabled = (process.env.ENABLED !== "true")
+	console.log(isEnabled)
+	
 	const contents = req.body
 	console.log(contents.name)
 
@@ -15,7 +18,7 @@ export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> 
 		html: `<h1>${contents.name} Has Sent A Message</h1><br /><p>${contents.msg}</p>`,
 		mail_settings: {
 			sandbox_mode: {
-				enable: false
+				enable: isEnabled
 			}
 		}
 	}
