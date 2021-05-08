@@ -15,7 +15,7 @@ export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> 
 		html: `<h1>${contents.name} Has Sent A Message</h1><br /><p>${contents.msg}</p>`,
 		mail_settings: {
 			sandbox_mode: {
-				enable: true
+				enable: false
 			}
 		}
 	}
