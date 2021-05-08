@@ -50,7 +50,7 @@ const Layout = ({
 							alt={name}
 						/>
 						<h2 className={utilStyles.headingLg}>
-							{name}
+							Contact {name}
 						</h2>
 					</> 						:
 					<h2 className={utilStyles.independentHeading}>

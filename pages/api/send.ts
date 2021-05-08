@@ -12,7 +12,12 @@ export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> 
 		from: process.env.FROM_EMAIL_ADDRESS,
 		subject: contents.sbj,
 		text: contents.msg,
-		html: `<h1>${contents.name} Has Sent A Message</h1><br /><p>${contents.msg}</p>`
+		html: `<h1>${contents.name} Has Sent A Message</h1><br /><p>${contents.msg}</p>`,
+		mail_settings: {
+			sandbox_mode: {
+				enable: true
+			}
+		}
 	}
 
 	try {
