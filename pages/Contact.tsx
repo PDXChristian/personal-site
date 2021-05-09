@@ -1,12 +1,12 @@
 import Layout from "../components/layout"
-import React, {BaseSyntheticEvent} from "react"
+import React, {BaseSyntheticEvent, useRef} from "react"
 import Head from "next/head"
 import Styles from "../styles/utils.module.css"
 
 const About = (): React.ReactElement =>{
 
-	const success = React.useRef(null)
-	const failure = React.useRef(null)
+	const success = useRef(null)
+	const failure = useRef(null)
 
 	const handleSuccess = () => {
 		failure.current.hidden = true
@@ -31,6 +31,7 @@ const About = (): React.ReactElement =>{
 			msg,
 			sbj
 		}
+
 		const res = await fetch("/api/send", {
 			method: "POST",
 			headers: {
@@ -38,16 +39,22 @@ const About = (): React.ReactElement =>{
 			},
 			body: JSON.stringify(data)
 		})
+
 		const text = await res.text()
 		console.log(text)
+
 		if(text === "Message sent successfully.") {
+
 			event.target.name.value = ""
 			event.target.email.value = ""
 			event.target.organization.value = ""
 			event.target.message.value = ""
 			handleSuccess()
+
 		} else {
+
 			handleFailure()
+
 		}
 	}
 	return (

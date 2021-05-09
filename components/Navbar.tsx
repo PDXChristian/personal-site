@@ -1,6 +1,6 @@
 import Link from "next/link"
 import styles from "../styles/utils.module.css"
-import React, {KeyboardEvent, useState} from "react"
+import React, {KeyboardEvent, useState, useRef} from "react"
 import {useRouter} from "next/router"
 
 const Navbar =
@@ -22,6 +22,8 @@ const Navbar =
 	const handleClick = () => {
 		setActive(!active)
 	}
+
+	const textVal = useRef(null)
 
 
 	const handleKey = (event: KeyboardEvent<HTMLInputElement>) => {
@@ -50,7 +52,7 @@ const Navbar =
 	}
 
 	const focusSearch = () => {
-		document.getElementById("textVal").focus()
+		textVal.current.focus()
 	}
 
 	const handleFocus = (event: React.FocusEvent<HTMLElement>) => {
@@ -66,7 +68,7 @@ const Navbar =
 							[self@christian {pageTitle}]$
 						</a>
 					</Link>
-					<span id="textVal" spellCheck="false" className={`${styles.hideCursor} input outline-none cursor-not-allowed overflow-hidden max-w-xs inline-block align-text-top whitespace-nowrap`} role="textbox" onKeyDown={handleKey} onFocus={handleFocus} contentEditable></span><span className="animate-blink">_</span>
+					<span ref={textVal} spellCheck="false" className={`${styles.hideCursor} input outline-none cursor-not-allowed overflow-hidden max-w-xs inline-block align-text-top whitespace-nowrap`} role="textbox" onKeyDown={handleKey} onFocus={handleFocus} contentEditable></span><span className="animate-blink">_</span>
 				</span>
 				<button className=" inline-flex p-3 hover:bg-blue-800 rounded lg:hidden text-white ml-auto hover:text-white outline-none dark:font-normal dark:text-dark-pallet-base dark:hover:bg-dark-pallet-dark" onClick={handleClick}>
 					<svg
