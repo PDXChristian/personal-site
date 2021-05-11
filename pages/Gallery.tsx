@@ -5,10 +5,10 @@ import Gallery from '../components/gallery';
 import photos from '../lib/photos';
 import {GetStaticProps} from 'next';
 import {Photo} from '../interfaces/photo';
-import Styles from '../styles/utils.module.css';
+import utilStyles from '../styles/utils.module.css';
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPhotos = photos();
+  const allPhotos = photos()
   return {
     props: {
       allPhotos,
@@ -49,10 +49,9 @@ const ImageGallery = ({
               setShow(!setShow);
             }
           }}
-          className={Styles.gallery}>
-            <img className={Styles.images} src={image} />
-          </div> :
-          ''
+          className={utilStyles.popout}>
+            <img className={utilStyles.images} src={image} />
+          </div> : ''
         }
 
       </Layout>

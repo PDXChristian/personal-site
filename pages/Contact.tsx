@@ -1,7 +1,7 @@
 import Layout from '../components/layout';
 import React, {BaseSyntheticEvent, useRef} from 'react';
 import Head from 'next/head';
-import Styles from '../styles/utils.module.css';
+import utilStyles from '../styles/utils.module.css';
 
 const About = (): React.ReactElement => {
   const success = useRef(null);
@@ -57,7 +57,7 @@ const About = (): React.ReactElement => {
       <Head>
         <title>Contact Christian</title>
       </Head>
-      <div className={Styles.contact}>
+      <div className={utilStyles.contact}>
         <p className='pt-2 m-2 mt-4 -mb-4'>
           For any questions or inquiries, please use the form{' '}
           and I will try to respond within 24 hours.
@@ -79,7 +79,7 @@ const About = (): React.ReactElement => {
             <input
               id='name'
               type='text'
-              className={Styles.inputBoxes}
+              className={utilStyles.inputBoxes}
               autoComplete='name'
               placeholder='Full Name'
               required />
@@ -87,7 +87,7 @@ const About = (): React.ReactElement => {
             <input
               id='email'
               type='text'
-              className={Styles.inputBoxes}
+              className={utilStyles.inputBoxes}
               autoComplete='email'
               placeholder='Email Address'
               required />
@@ -95,7 +95,7 @@ const About = (): React.ReactElement => {
             <input
               id='organization'
               type='text'
-              className={Styles.inputBoxes}
+              className={utilStyles.inputBoxes}
               autoComplete='organization'
               placeholder='Organization'
               required />
@@ -104,7 +104,7 @@ const About = (): React.ReactElement => {
 
             <textarea
               id='message'
-              className={Styles.messageBox}
+              className={utilStyles.messageBox}
               placeholder='Please enter your message...'
               required />
 
