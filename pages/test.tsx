@@ -1,12 +1,12 @@
-import Layout from "../components/layout"
-import React from "react"
+import Layout from '../components/layout';
+import React from 'react';
 
 const test = (): React.ReactElement => {
-	return (
-		<Layout pageTitle="test">
+  return (
+    <Layout pageTitle='test'>
 
-		</Layout>
-	)
-}
+    </Layout>
+  );
+};
 
-export default test
+export default test;

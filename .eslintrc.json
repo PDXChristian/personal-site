@@ -1,19 +1,12 @@
 {
-	"settings": {
-		"react": {
-			"pragma":"React",
-			"version": "17.0.1"
-		}
-	},
     "env": {
         "browser": true,
         "es2021": true,
         "node": true
     },
     "extends": [
-        "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "google"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -28,21 +21,13 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "never"
-        ]
+      "max-len": [1, 80, 2, {
+        "ignorePattern": "d='([\\s\\S]*?)'"
+      }]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }

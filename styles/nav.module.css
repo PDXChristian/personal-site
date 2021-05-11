@@ -1,0 +1,28 @@
+.mainNav {
+  @apply flex items-center flex-wrap bg-blue-900 p-3 dark:bg-dark-pallet-navbar;
+}
+
+.mainNavText {
+  @apply text-xl text-white dark:text-dark-pallet-base font-bold tracking-wide;
+}
+
+.bashStyle {
+  @apply inline-flex items-center p-2 font-mono;
+}
+
+.searchBox {
+  @apply outline-none cursor-not-allowed overflow-hidden max-w-xs inline-block align-text-top whitespace-nowrap;
+}
+
+.mobileNav {
+  @apply inline-flex p-3 hover:bg-blue-800 rounded lg:hidden text-white ml-auto hover:text-white outline-none
+      dark:text-dark-pallet-base dark:hover:bg-dark-pallet-dark;
+}
+
+.mobileShowMenu {
+ @apply w-full lg:inline-flex lg:flex-grow lg:w-auto;
+}
+
+.mobileNavMenu {
+  @apply lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto;
+}

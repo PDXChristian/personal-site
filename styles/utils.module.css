@@ -41,3 +41,19 @@
 .messageBox {
 	@apply border-2 resize-none sm:h-40 lg:h-64 w-5/6 focus:ring-2 focus:ring-blue-300 focus:ring-dark-pallet-navbar dark:border-dark-pallet-dark m-4 focus:outline-none dark:bg-dark-pallet-base;
 }
+
+.gallery {
+  @apply relative grid justify-items-center transition-transform z-0 duration-100 hover:shadow-2xl transform hover:z-10 hover:scale-125 h-60 w-auto m-1 -mb-1;
+}
+
+.contact {
+  @apply border-2 dark:border-dark-pallet-dark dark:text-dark-pallet-fg;
+}
+
+.gallery {
+  @apply fixed w-screen h-screen top-0 left-0 z-50 grid place-content-center bg-black bg-opacity-90;
+}
+
+.images { 
+  @apply justify-self-center rounded w-2/3 h-auto;
+}
