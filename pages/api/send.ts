@@ -3,6 +3,10 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
     sgMail.setApiKey(process.env.SENDGRID_API);
+
+    const forwarded = req.headers['x-real-ip'];
+
+    console.log(forwarded);
     
     const contents = req.body;
 
@@ -27,4 +31,3 @@ export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> 
         res.status(400).send("Message not sent.");
     }
 };
-
