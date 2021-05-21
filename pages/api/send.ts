@@ -8,9 +8,9 @@ export default async (
   sgMail.setApiKey(process.env.SENDGRID_API);
 
   const forwarded = req.headers['x-forwarded-for'];
-  console.log(forwarded);
 
   const contents = req.body;
+  console.log(process.env.NODE_ENV)
 
   const verifyBody = process.env.NODE_ENV === 'production' ?
       `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${contents.token}&remoteip=${forwarded}` :
@@ -41,7 +41,7 @@ export default async (
     const verify = await fetch('https://www.google.com/recaptcha/api/siteverify', verifyOptions);
     const verifyData = await verify.json();
     console.log(verifyData);
-    if (verifyData.score > 0.5) {
+    if (verifyData.success) {
       await sgMail.send(content);
       res.status(200).send('Message sent successfully.');
     }
