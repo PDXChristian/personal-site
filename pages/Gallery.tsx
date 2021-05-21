@@ -8,7 +8,7 @@ import {Photo} from '../interfaces/photo';
 import utilStyles from '../styles/utils.module.css';
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPhotos = photos()
+  const allPhotos = photos();
   return {
     props: {
       allPhotos,

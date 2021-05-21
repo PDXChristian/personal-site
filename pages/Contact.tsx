@@ -19,38 +19,43 @@ const About = (): React.ReactElement => {
 
   const submitContact = async (event: BaseSyntheticEvent) => {
     event.preventDefault();
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    const org = event.target.organization.value;
-    const msg = event.target.message.value;
-    const sbj = `New message from ${email} at ${org}`;
+    grecaptcha.ready(async function() {
+      grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'}).then(async function(token) {
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const org = event.target.organization.value;
+        const msg = event.target.message.value;
+        const sbj = `New message from ${email} at ${org}`;
 
-    const data = {
-      name,
-      msg,
-      sbj,
-    };
+        const data = {
+          name,
+          msg,
+          sbj,
+          token,
+        };
 
-    const res = await fetch('/api/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
+        const res = await fetch('/api/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        const text = await res.text();
+        console.log(text);
+
+        if (text === 'Message sent successfully.') {
+          event.target.name.value = '';
+          event.target.email.value = '';
+          event.target.organization.value = '';
+          event.target.message.value = '';
+          handleSuccess();
+        } else {
+          handleFailure();
+        }
+      });
     });
-
-    const text = await res.text();
-    console.log(text);
-
-    if (text === 'Message sent successfully.') {
-      event.target.name.value = '';
-      event.target.email.value = '';
-      event.target.organization.value = '';
-      event.target.message.value = '';
-      handleSuccess();
-    } else {
-      handleFailure();
-    }
   };
   return (
     <Layout pageTitle='Contact'>
