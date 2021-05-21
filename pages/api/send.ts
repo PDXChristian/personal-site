@@ -40,7 +40,7 @@ export default async (
   try {
     const verify = await fetch('https://www.google.com/recaptcha/api/siteverify', verifyOptions);
     const verifyData = await verify.json();
-    if (verifyData.score === 0.5) {
+    if (verifyData.score > 0.5) {
       await sgMail.send(content);
       res.status(200).send('Message sent successfully.');
     }
