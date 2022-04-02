@@ -14,7 +14,8 @@ const securityHeaders = [
   {key: 'X-Frame-Options', value: 'SAMEORIGIN'},
   {key: 'Referrer-Policy', value: 'no-referrer'},
   {key: 'Content-Security-Policy', value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim()},
-  {key: 'X-Content-Type-Options', value: 'nosniff'}
+  {key: 'X-Content-Type-Options', value: 'nosniff'},
+  {key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload'}
 ]
 
 module.exports = {
