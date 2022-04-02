@@ -1,9 +1,9 @@
-const ContentSecurityPolicy = `
+const ContentSecurityPolicy =`
   default-src https:;
   object-src 'none';
   img-src 'self';
-  script-src 'self';
   style-src 'self';
+  script-src 'self';
   font-src 'self';
   frame-ancestors 'none'
 `
@@ -13,7 +13,7 @@ const securityHeaders = [
   {key: 'X-DNS-Prefetch-Control', value: 'on'},
   {key: 'X-Frame-Options', value: 'SAMEORIGIN'},
   {key: 'Referrer-Policy', value: 'no-referrer'},
-//  {key: 'Content-Security-Policy', value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim()},
+  {key: 'Content-Security-Policy', value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim()},
   {key: 'X-Content-Type-Options', value: 'nosniff'}
 ]
 
