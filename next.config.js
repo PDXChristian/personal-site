@@ -1,11 +1,23 @@
 const ContentSecurityPolicy =`
-  default-src https:;
+  default-src 'none';
+  base-uri 'none';
+  form-action 'self';
   object-src 'none';
-  img-src 'self';
+  img-src 'self' www.gstatic.com/recaptcha;
   style-src 'self';
-  script-src 'self';
-  font-src 'self';
-  frame-ancestors 'none'
+  script-src 'self'
+    https://www.recaptcha.net
+    https://recaptcha.net
+    https://www.gstatic.com/recaptcha/
+    https://www.gstatic.cn/recaptcha/
+    https://www.google.com/recaptcha/;
+  font-src 'self'
+    *.recaptcha.net
+    recaptcha.net
+    https://www.google.com/recaptcha/
+    https://recaptcha.google.com;
+  frame-ancestors 'none';
+  worker-src www.recaptcha.net;
 `
 
 const securityHeaders = [
