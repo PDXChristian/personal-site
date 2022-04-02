@@ -8,14 +8,14 @@ const ContentSecurityPolicy =`
     'sha256-GHgVb5EEAUPhVeTfwEFuX9+WADcCrePlK6CwdXznIhY='
     'sha256-xd6kVmsB5qDY47QB4x7Ys+1t88OSTa40q/98d9NyF8Q='
     'sha256-8BNxsIsc6VHj8/elC63fqbrGsnTOvhNTf17uhaIdUI4='
-    'sha256-d72pVhmRTNXT2Gr2OHFRLnVaHBfiBI5EvDCF6tA924Y=';
+    'sha256-d72pVhmRTNXT2Gr2OHFRLnVaHBfiBI5EvDCF6tA924Y='
+    'unsafe-inline';
   script-src 'self'
     https://www.recaptcha.net
     https://recaptcha.net
     https://www.gstatic.com/recaptcha/
     https://www.gstatic.cn/recaptcha/
-    https://www.google.com/recaptcha/
-    'unsafe-inline';
+    https://www.google.com/recaptcha/;
   font-src 'self'
     *.recaptcha.net
     recaptcha.net
