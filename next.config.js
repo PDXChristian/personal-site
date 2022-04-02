@@ -4,17 +4,18 @@ const ContentSecurityPolicy =`
   form-action 'self';
   object-src 'none';
   img-src 'self' www.gstatic.com/recaptcha;
-  style-src 'self'
+  style-src 'self' *.christianwegman.com
     'sha256-GHgVb5EEAUPhVeTfwEFuX9+WADcCrePlK6CwdXznIhY='
     'sha256-xd6kVmsB5qDY47QB4x7Ys+1t88OSTa40q/98d9NyF8Q='
-    'sha256-8BNxsIsc6VHj8/elC63fqbrGsnTOvhNTf17uhaIdUI4=',
+    'sha256-8BNxsIsc6VHj8/elC63fqbrGsnTOvhNTf17uhaIdUI4='
     'sha256-d72pVhmRTNXT2Gr2OHFRLnVaHBfiBI5EvDCF6tA924Y=';
   script-src 'self'
     https://www.recaptcha.net
     https://recaptcha.net
     https://www.gstatic.com/recaptcha/
     https://www.gstatic.cn/recaptcha/
-    https://www.google.com/recaptcha/;
+    https://www.google.com/recaptcha/
+    'unsafe-inline';
   font-src 'self'
     *.recaptcha.net
     recaptcha.net
