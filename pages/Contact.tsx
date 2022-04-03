@@ -63,6 +63,9 @@ const About = (): React.ReactElement => {
         <title>Contact Christian</title>
       </Head>
       <div className={utilStyles.contact}>
+        <p className='text-red-300'>
+          Email is currently unavailable. 
+        </p>
         <p className='pt-2 m-2 mt-4 -mb-4'>
           For any questions or inquiries, please use the form{' '}
           and I will try to respond within 24 hours.
