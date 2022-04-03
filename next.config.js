@@ -3,7 +3,7 @@ const ContentSecurityPolicy =`
   base-uri 'none';
   form-action 'self';
   object-src 'none';
-  img-src 'self' www.gstatic.com/recaptcha;
+  img-src 'self' www.gstatic.com/recaptcha data: w3.org/svg/2000;
   style-src 'self' 'unsafe-inline' *.christianwegman.com;
   script-src 'self'
     https://www.recaptcha.net
