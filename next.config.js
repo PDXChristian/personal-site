@@ -4,7 +4,7 @@ const ContentSecurityPolicy =`
   form-action 'self';
   object-src 'none';
   img-src 'self' www.gstatic.com/recaptcha data: w3.org/svg/2000;
-  style-src 'self' 'unsafe-inline' *.christianwegman.com;
+  style-src 'self' 'unsafe-inline' https://christianwegman.com https://www.christianwegman.com;
   script-src 'self'
     https://www.recaptcha.net
     https://recaptcha.net
@@ -17,7 +17,7 @@ const ContentSecurityPolicy =`
     https://www.google.com/recaptcha/
     https://recaptcha.google.com;
   frame-ancestors 'none';
-  prefetch-src https://christianwegman.com/;
+  prefetch-src https://christianwegman.com/ https://www.christianwegman.com;
   worker-src www.recaptcha.net;
 `
 
