@@ -4,7 +4,7 @@ const ContentSecurityPolicy =`
   form-action 'self';
   object-src 'none';
   img-src 'self' www.gstatic.com/recaptcha;
-  style-src 'self' 'unsafe-inline' *.christianwegman.com
+  style-src 'self' 'unsafe-inline' *.christianwegman.com;
   script-src 'self'
     https://www.recaptcha.net
     https://recaptcha.net
