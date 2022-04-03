@@ -34,7 +34,7 @@ const About = (): React.ReactElement => {
           token,
         };
 
-        const res = await fetch('/api/send', {
+        /*const res = await fetch('/api/send', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -54,7 +54,8 @@ const About = (): React.ReactElement => {
         } else {
           handleFailure();
         }
-      });
+      });*/
+      handleFailure();
     });
   };
   return (
