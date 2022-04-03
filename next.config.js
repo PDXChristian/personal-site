@@ -1,5 +1,5 @@
 const ContentSecurityPolicy =`
-  default-src 'none' https://vitals.vercel-insights.com/v1/vitals https://www.google.com;
+  default-src 'this' https://vitals.vercel-insights.com/v1/vitals https://www.google.com *.christianwegman.com;
   base-uri 'none';
   form-action 'self';
   object-src 'none';
@@ -21,7 +21,7 @@ const ContentSecurityPolicy =`
     https://www.google.com/recaptcha/
     https://recaptcha.google.com;
   frame-ancestors 'none';
-  prefetch-src *christianwegman.com;
+  prefetch-src *.christianwegman.com;
   worker-src www.recaptcha.net;
 `
 
