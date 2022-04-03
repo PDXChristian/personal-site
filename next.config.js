@@ -17,7 +17,7 @@ const ContentSecurityPolicy =`
     https://www.google.com/recaptcha/
     https://recaptcha.google.com;
   frame-ancestors 'none';
-  prefetch-src *.christianwegman.com;
+  prefetch-src https://christianwegman.com/;
   worker-src www.recaptcha.net;
 `
 
