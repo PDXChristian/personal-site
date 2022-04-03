@@ -53,9 +53,9 @@ const About = (): React.ReactElement => {
           handleSuccess();
         } else {
           handleFailure();
-        }
-      });*/
-      handleFailure();
+        }*/
+        handleFailure();
+      });
     });
   };
   return (
