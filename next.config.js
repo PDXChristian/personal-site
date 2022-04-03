@@ -1,14 +1,14 @@
 const ContentSecurityPolicy =`
-  default-src 'this' https://vitals.vercel-insights.com/v1/vitals https://www.google.com *.christianwegman.com;
+  default-src 'self' https://vitals.vercel-insights.com/v1/vitals https://www.google.com *.christianwegman.com;
   base-uri 'none';
   form-action 'self';
   object-src 'none';
   img-src 'self' www.gstatic.com/recaptcha;
   style-src 'self' *.christianwegman.com
-    sha256-GHgVb5EEAUPhVeTfwEFuX9+WADcCrePlK6CwdXznIhY=
-    sha256-xd6kVmsB5qDY47QB4x7Ys+1t88OSTa40q/98d9NyF8Q=
-    sha256-8BNxsIsc6VHj8/elC63fqbrGsnTOvhNTf17uhaIdUI4=
-    sha256-d72pVhmRTNXT2Gr2OHFRLnVaHBfiBI5EvDCF6tA924Y=;
+    'sha256-GHgVb5EEAUPhVeTfwEFuX9+WADcCrePlK6CwdXznIhY='
+    'sha256-xd6kVmsB5qDY47QB4x7Ys+1t88OSTa40q/98d9NyF8Q='
+    'sha256-8BNxsIsc6VHj8/elC63fqbrGsnTOvhNTf17uhaIdUI4='
+    'sha256-d72pVhmRTNXT2Gr2OHFRLnVaHBfiBI5EvDCF6tA924Y=';
   script-src 'self'
     https://www.recaptcha.net
     https://recaptcha.net
