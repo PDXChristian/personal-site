@@ -23,6 +23,7 @@ const ContentSecurityPolicy =`
 
 const securityHeaders = [
   {key: 'X-XSS-Protection', value: '1; mode=block'},
+  {key: 'X-Robots-Tag', value: 'noindex, nofollow'},
   {key: 'X-DNS-Prefetch-Control', value: 'on'},
   {key: 'X-Frame-Options', value: 'SAMEORIGIN'},
   {key: 'Referrer-Policy', value: 'no-referrer'},
