@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === 'production') {
     base-uri 'none';
     form-action 'self';
     object-src 'none';
-    img-src 'self' https://placeimg.com/400/225/arch www.gstatic.com/recaptcha data: w3.org/svg/2000;
+    img-src 'self' https://images.unsplash.com www.gstatic.com/recaptcha data: w3.org/svg/2000;
     style-src 'self' 'unsafe-inline' https://christianwegman.com https://www.christianwegman.com;
     script-src 'self'
       https://www.recaptcha.net
