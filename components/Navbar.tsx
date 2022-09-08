@@ -69,7 +69,7 @@ const Navbar =
           </Link>
           <span ref={textVal}
             spellCheck='false'
-            className={`${styles.hideCursor} input ${NavStyle.searchBox}`}
+            className={`${styles.hideCursor} ${NavStyle.searchBox}`}
             role='textbox'
             onKeyDown={handleKey}
             onFocus={handleFocus} contentEditable/ >
