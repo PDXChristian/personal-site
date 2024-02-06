@@ -6,8 +6,8 @@ import Link from 'next/link';
 import {Navbar} from './Navbar';
 import React from 'react';
 
-const name = 'Christian';
-export const siteTitle = 'Christian';
+const name = 'Christian Wegman';
+export const siteTitle = 'Christian Wegman';
 
 const Layout = ({
   children,
@@ -26,7 +26,7 @@ const Layout = ({
           <link rel='icon' href='/favicon.ico' />
           <meta
             name='description'
-            content='Christian'
+            content='Christian Wegman'
           />
           <meta name='og:title' content={siteTitle} />
         </Head>
@@ -35,7 +35,7 @@ const Layout = ({
             <>
               <Image
                 priority
-                src='/images/profile.jpg'
+                src='/images/profile2.jpg'
                 className={utilStyles.borderCircle}
                 height={216}
                 width={216}
@@ -47,7 +47,7 @@ const Layout = ({
               <>
                 <Image
                   priority
-                  src='/images/profile.jpg'
+                  src='/images/profile2.jpg'
                   className={utilStyles.borderCircle}
                   height={144}
                   width={144}

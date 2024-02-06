@@ -12,8 +12,8 @@ const Home = (): React.ReactElement =>{
       <section className={`${utilStyles.headingMd}`}>
         <p className='pb-2'>
           Hello, my name is{' '}
-          <b>Christian</b>.{' '}
-          I&apos;m a software engineer from Oregon.
+          <b>Christian Wegman</b>.{' '}
+          I&apos;m a software engineer from Portland, Oregon.
         </p>
         <p className='pt-2'>
           All of my future projects will be posted here{' '}
